@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+class book
+{
+public:
+    string book_name;
+    int id;
+    float price;
+    string author;
+
+    void display()
+    {
+        cout << "NAME OF BOOK: " << book_name << endl;
+        cout << "BOOK ID: " << id << endl;
+        cout << "PRICE OF BOOK: " << price << endl;
+        cout << "AUTHOR'S NAME: " << author << endl;
+    }
+};
+
+int main()
+{
+    book b1;
+
+    b1.book_name = "ATOMIC HABIT";
+    b1.id = 125;
+    b1.price = 450.00;
+    b1.author = "JAMES CLEAR";
+
+    b1.display();
+
+    return 0;
+}
