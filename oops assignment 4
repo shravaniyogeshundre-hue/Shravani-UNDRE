@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+class Book
+{
+public:
+    string title;
+    string author;
+    float price;
+
+    
+    Book()
+    {
+        title = "Unknown";
+        author = "Unknown";
+        price = 0;
+    }
+
+    
+    Book(string t, string a, float p)
+    {
+        title = t;
+        author = a;
+        price = p;
+    }
+
+    void display()
+    {
+        cout << "Book Title: " << title << endl;
+        cout << "Author: " << author << endl;
+        cout << "Price: " << price << endl;
+        cout << endl;
+    }
+};
+
+int main()
+{
+    
+    Book b1;
+
+    
+    Book b2("C++ Programming", "keystone  Stroustrup", 500);
+
+    b1.display();
+    b2.display();
+
+    return 0;
+}
