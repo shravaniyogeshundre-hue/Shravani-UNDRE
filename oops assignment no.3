@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+class employee
+{
+public:
+    string name;
+    int emp_id;
+    int salary;
+
+    void display()
+    {
+        cout << "EMPLOYEE NAME:" << name << endl;
+        cout << "EMPLOYEE ID:" << emp_id << endl;
+        cout << "EMPLOYEE'S SALARY:" << salary << endl;
+    }
+};
+
+int main()
+{
+    employee e1;
+
+    e1.name = "JAMES";
+    e1.emp_id = 001;
+    e1.salary = 125000;
+
+    e1.display();
+
+    return 0;
+}
