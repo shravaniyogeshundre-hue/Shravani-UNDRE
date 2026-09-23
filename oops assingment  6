@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class Employee
+{
+public:
+
+    // Constructor
+    Employee()
+    {
+        cout << "Employee record created." << endl;
+    }
+
+    // Destructor
+    ~Employee()
+    {
+        cout << "Employee record removed from memory." << endl;
+    }
+};
+
+int main()
+{
+    {
+        Employee emp;
+        cout << "Processing employee record..." << endl;
+    } // Destructor is automatically called here
+
+    cout << "Processing completed." << endl;
+
+    return 0;
+}
