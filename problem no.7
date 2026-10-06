@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+
+class university
+{
+public:
+    string name;
+    int age;
+    long long contact;
+
+    void display()
+    {
+        cout << "Name of student: " << name << endl;
+        cout << "Age of student: " << age << endl;
+        cout << "Contact of student: " << contact << endl;
+    }
+};
+
+class student : public university
+{
+public:
+    int rollno;
+    string branch;
+
+    void show()
+    {
+        cout << "Rollno of student: " << rollno << endl;
+        cout << "Branch of student: " << branch << endl;
+    }
+};
+
+int main()
+{
+    student s1, s2;
+
+    s1.name = "Shravani";
+    s1.age = 18;
+    s1.contact = 6760474756;
+    s1.rollno = 38;
+    s1.branch = "AIML";
+
+    s2.name = "Avanti";
+    s2.age = 18;
+    s2.contact = 7000000000;
+    s2.rollno = 78;
+    s2.branch = "AIDS";
+
+    s1.display();
+    s1.show();
+
+    s2.display();
+    s2.show();
+
+    return 0;
+}
