@@ -1,0 +1,69 @@
+#include <iostream>
+using namespace std;
+
+// Base class
+class Person
+{
+public:
+    string name, contact;
+    int age;
+
+    void getPerson()
+    {
+        cout << "Enter name: ";
+        cin >> name;
+
+        cout << "Enter age: ";
+        cin >> age;
+
+        cout << "Enter contact: ";
+        cin >> contact;
+    }
+
+    void displayPerson()
+    {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+        cout << "Contact: " << contact << endl;
+    }
+};
+
+// Derived class
+class Student : public Person
+{
+public:
+    int rollNo;
+    string branch;
+
+    void getStudent()
+    {
+        getPerson();
+
+        cout << "Enter roll number: ";
+        cin >> rollNo;
+
+        cout << "Enter branch: ";
+        cin >> branch;
+    }
+
+    void displayStudent()
+    {
+        displayPerson();
+
+        cout << "Roll Number: " << rollNo << endl;
+        cout << "Branch: " << branch << endl;
+    }
+};
+
+int main()
+{
+    Student s;
+
+    cout << "Enter Student Details:\n";
+    s.getStudent();
+
+    cout << "\nStudent Information:\n";
+    s.displayStudent();
+
+    return 0;
+}
