@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+template <class T>
+T findLarger(T a, T b)
+{
+    if (a > b)
+        return a;
+    else
+        return b;
+}
+
+int main()
+{
+    cout << "Greater integer: " << findLarger(16, 20) << endl;
+
+    cout << "Greater decimal: " << findLarger(5.5, 8.7) << endl;
+
+    return 0;
+}
