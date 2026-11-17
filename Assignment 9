@@ -1,0 +1,85 @@
+#include <iostream>
+using namespace std;
+
+// Base class
+class Vehicle
+{
+public:
+    string brand;
+    int speed;
+
+    void getVehicle()
+    {
+        cout << "Enter brand: ";
+        cin >> brand;
+
+        cout << "Enter speed: ";
+        cin >> speed;
+    }
+
+    void displayVehicle()
+    {
+        cout << "Brand: " << brand << endl;
+        cout << "Speed: " << speed << " km/hr" << endl;
+    }
+};
+
+// Derived class 1
+class Car : public Vehicle
+{
+public:
+    int seats;
+
+    void getCar()
+    {
+        getVehicle();
+        cout << "Enter number of seats: ";
+        cin >> seats;
+    }
+
+    void displayCar()
+    {
+        displayVehicle();
+        cout << "Seats: " << seats << endl;
+    }
+};
+
+// Derived class 2
+class Bike : public Vehicle
+{
+public:
+    int mileage;
+
+    void getBike()
+    {
+        getVehicle();
+        cout << "Enter mileage: ";
+        cin >> mileage;
+    }
+
+    void displayBike()
+    {
+        displayVehicle();
+        cout << "Mileage: " << mileage << " km/l" << endl;
+    }
+};
+
+int main()
+{
+    Car c;
+    Bike b;
+
+    cout << "Enter Car Details:\n";
+    c.getCar();
+
+    cout << "\nEnter Bike Details:\n";
+    b.getBike();
+
+    cout << "\nCar Information:\n";
+    c.displayCar();
+
+    cout << "\nBike Information:\n";
+    b.displayBike();
+
+    return 0;
+}
